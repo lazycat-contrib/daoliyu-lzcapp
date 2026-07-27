@@ -1,0 +1,41 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/daoliyu.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: daoliyu-music
+
+build:
+  run_buildscript: false
+
+images:
+  - id: daoliyu-music
+    target: service
+    service: daoliyu-music
+    source: docker.io/msmkls/daoliyu-music
+    channel: stable
+    tag_regex: '^v?\d+\.\d+\.\d+$'
+    version_regex: '^v?(?P<version>\d+\.\d+\.\d+)$'
+    delivery:
+      mode: mirror
+      image_template: docker.1ms.run/msmkls/daoliyu-music:{tag}
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+    skip_if_version_exists: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: 道理鱼
+    summary: 道理鱼音乐管理系统的懒猫微服版本

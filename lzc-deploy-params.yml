@@ -1,0 +1,13 @@
+params:
+  - id: library_dir
+    type: string
+    name: "Music Library Directory"
+    description: "Folder under the LazyCat user home mounted as the music library"
+    default_value: "music"
+    optional: false
+
+locales:
+  zh:
+    library_dir:
+      name: "音乐库目录"
+      description: "懒猫用户目录下作为音乐库挂载的文件夹，默认为 music"

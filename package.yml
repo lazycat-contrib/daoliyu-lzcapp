@@ -1,0 +1,19 @@
+package: community.lazycat.app.daoliyu
+version: 0.3.5
+name: 道理鱼
+description: "本地音乐库管理、播放与转码服务"
+min_os_version: 1.5.0
+author: msmkls
+homepage: https://daoliyu.cn
+locales:
+  zh:
+    name: "道理鱼"
+    description: "本地音乐库管理、播放与转码服务"
+  en:
+    name: "DaoLiYu Music"
+    description: "Self-hosted music library management, playback, and transcoding service"
+permissions:
+  required:
+    - net.internet
+    - document.read
+    - document.write
