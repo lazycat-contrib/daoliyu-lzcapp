@@ -6,11 +6,10 @@ application:
       backend: http://daoliyu-music:4000/
   public_path:
     - /
-
 services:
   daoliyu-music:
-    # upstream: docker.io/msmkls/daoliyu-music:0.3.5
-    image: docker.1ms.run/msmkls/daoliyu-music:0.3.5
+    # upstream: docker.io/msmkls/daoliyu-music:0.3.6
+    image: docker.1ms.run/msmkls/daoliyu-music:0.3.6
     environment:
       - DLY_DB_DRIVER=sqlite
       - DLY_LOG_MIRROR_CONSOLE=true
@@ -25,8 +24,6 @@ services:
       - /lzcapp/run/mnt/home/{{ .U.library_dir }}:/app/runtime/library
       - /lzcapp/var/cache/transcoding:/app/runtime/cache/transcoding
       - /lzcapp/var/machine-id:/host/etc
-
 ext_config:
   enable_document_access: true
-
 usage: "每位用户运行独立实例；音乐库默认读取懒猫用户目录下的 music 文件夹。首次打开后按应用自身引导完成初始化。"
