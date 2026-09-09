@@ -8,8 +8,8 @@ application:
     - /
 services:
   daoliyu-music:
-    # upstream: docker.io/msmkls/daoliyu-music:1.0.2
-    image: docker.1ms.run/msmkls/daoliyu-music:1.0.2
+    # upstream: docker.io/msmkls/daoliyu-music:1.0.3
+    image: docker.1ms.run/msmkls/daoliyu-music:1.0.3
     environment:
       - DLY_DB_DRIVER=sqlite
       - DLY_LOG_MIRROR_CONSOLE=true

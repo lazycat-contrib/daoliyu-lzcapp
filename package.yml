@@ -1,5 +1,5 @@
 package: community.lazycat.app.daoliyu
-version: 1.0.2
+version: 1.0.3
 name: 道理鱼
 description: "本地音乐库管理、播放与转码服务"
 min_os_version: 1.5.0
