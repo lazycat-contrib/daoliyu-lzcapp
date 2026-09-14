@@ -11,7 +11,7 @@ on:
       - package.yml
   schedule:
     # Every two days at 23:17 Asia/Shanghai (UTC+8).
-    - cron: "17 15 */2 * *"
+    - cron: "17 13 */2 * *"
   workflow_dispatch:
 
 permissions:
